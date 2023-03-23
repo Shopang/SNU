@@ -1,0 +1,386 @@
+{% extends "layout_b.html" %}
+{% block drugs_info %}
+.drugs_info {
+background-color:#FAFAFA;
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+{% endblock %}
+{% block content %}
+
+  <div class="row">
+    <div class="col-lg-12">
+        <!--<h1 id="type"><img src="static/logo_snu.png" style="width: 30px">&nbsp; 등록약제</h1>-->
+        <h1>&nbsp;배추좀나방 화학합성 살충제 유효성분 내역 및 특성</h1>
+    </div>
+  </div>
+
+  <div>
+    <table class="type01" style="width:1000px;">
+      <thead>
+        <tr>
+            <th>유효성분</th>
+            <th>단제 유효성분</th>
+            <th>합제 유효성분</th>
+            <th>주요 독성 작용</th>
+            <th>IRAC 기준 그룹</th>
+            <th>세부 작용기작</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>Thiodicarb</td>
+            <td>O</td>
+            <td></td>
+            <td>신경계 및 근육</td>
+            <td>1A</td>
+            <td>AChE 활성 억제</td>
+        </tr>
+        <tr>
+            <td>Dichlorvos</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>1B</td>
+            <td>AChE 활성 억제</td>
+        </tr>
+        <tr>
+            <td>Phenthoate</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>1B</td>
+            <td>AChE 활성 억제</td>
+        </tr>
+        <tr>
+            <td>Bifenthrin</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Alpha-Cypermethrin</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Cypermethrin</td>
+            <td>O</td>
+            <td></td>
+            <td>신경계 및 근육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Lambda-Cyhalothrin</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Etofenprox	</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Fenvalerate</td>
+            <td>O</td>
+            <td></td>
+            <td>신경계 및 근육</td>
+            <td>3A</td>
+            <td>Sodium channel 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Acetamiprid</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>4A</td>
+            <td>nAChR에 경쟁적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Clothianidin</td>
+            <td></td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>4A</td>
+            <td>nAChR에 경쟁적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Dinotefuran</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>4A</td>
+            <td>nAChR에 경쟁적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Thiacloprid</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>4A</td>
+            <td>nAChR에 경쟁적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Thiamethoxam</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>4A</td>
+            <td>nAChR에 경쟁적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Spinosad</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>5</td>
+            <td>nAChR에 간접적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Spinetoram</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>5</td>
+            <td>nAChR에 간접적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Abamectin</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>6</td>
+            <td>GluCl에 간접적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Emamectin benzoate</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>6</td>
+            <td>GluCl에 간접적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Lepimectin</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>6</td>
+            <td>GluCl에 간접적 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Pymetrozine</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>9B</td>
+            <td>Chordotonal 기관의 TRPV 채널 기능 조절</td>
+        </tr>
+        <tr>
+            <td>B.t. subsp. aizawai</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>11A</td>
+            <td>미생물 독성 유래 곤충 중장막 파괴 유발</td>
+        </tr>
+        <tr>
+            <td>B.t. subsp. aizawai gb 413</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>11A</td>
+            <td>미생물 독성 유래 곤충 중장막 파괴 유발</td>
+        </tr>
+        <tr>
+            <td>B.t. subsp. aizawai nt 0423</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>11A</td>
+            <td>미생물 독성 유래 곤충 중장막 파괴 유발</td>
+        </tr>
+        <tr>
+            <td>B.t. subsp. kurstaki</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>11A</td>
+            <td>미생물 독성 유래 곤충 중장막 파괴 유발</td>
+        </tr>
+        <tr>
+            <td>Chlorfenapyr</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>13</td>
+            <td>미토콘드리아 전자 농도 불균형에 의한 oxidative phosphorylation 부조화</td>
+        </tr>
+        <tr>
+            <td>Bistrifluron</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Chlorfluazuron</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Diflubenzuron</td>
+            <td></td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Flufenoxuron</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Lufenuron</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Novaluron</td>
+            <td>O</td>
+            <td></td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Teflubenzuron</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>15</td>
+            <td>Type0 키친 생합성 저해</td>
+        </tr>
+        <tr>
+            <td>Methoxyfenozide</td>
+            <td>O</td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>18</td>
+            <td>탈피 호르몬 수용체 기능 촉진</td>
+        </tr>
+        <tr>
+            <td>Tebufenozide</td>
+            <td></td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>18</td>
+            <td>탈피 호르몬 수용체 기능 촉진</td>
+        </tr>
+        <tr>
+            <td>Indoxacarb</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>22A</td>
+            <td>Sodiumchannel 차단</td>
+        </tr>
+        <tr>
+            <td>Metaflumizone</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>22B</td>
+            <td>Sodiumchannel 차단</td>
+        </tr>
+        <tr>
+            <td>Chlorantraniliprole</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>28</td>
+            <td>Ryanodine 수용체 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Cyantraniliprole</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>28</td>
+            <td>Ryanodine 수용체 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Cyclaniliprole</td>
+            <td>O</td>
+            <td></td>
+            <td>신경계 및 근육</td>
+            <td>28</td>
+            <td>Ryanodine 수용체 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Flubendiamide</td>
+            <td>O</td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>28</td>
+            <td>Ryanodine 수용체 기능 조절</td>
+        </tr>
+        <tr>
+            <td>Flonicamid</td>
+            <td></td>
+            <td>O</td>
+            <td>신경계 및 근육</td>
+            <td>29</td>
+            <td>Chordotonal 기관 기능 조절-세부 작용점 미확인</td>
+        </tr>
+        <tr>
+            <td>Pyridalyl</td>
+            <td>O</td>
+            <td>O</td>
+            <td></td>
+            <td>UN</td>
+            <td>독성 기작 미확인</td>
+        </tr>
+        <tr>
+            <td>Fluxametamide</td>
+            <td>O</td>
+            <td></td>
+            <td>신경계 및 근육</td>
+            <td>NEO*</td>
+            <td>신규약제_Ligand-gated chloride channel작용</td>
+        </tr>
+        <tr>
+            <td>Amisulbrom</td>
+            <td></td>
+            <td>O</td>
+            <td>성장 및 발육</td>
+            <td>SULFONAMIDE</td>
+            <td>살균제: 미토콘드리아 호흡 억제</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

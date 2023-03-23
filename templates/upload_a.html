@@ -1,0 +1,148 @@
+{% extends "layout_a.html" %}
+{% block upload %}
+.upload {
+background-color:#FAFAFA;
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+{% endblock %}
+{% block content %}
+    <style>
+    /* file과 submit 버튼 스타일이 잘 어울리지 않아서 고생했다. */
+    input[type=submit] {             /* submit 버튼 스타일 */
+        width: 100px;
+        display: inline-block;
+        padding: .5em .75em;
+        color: #fff;
+        font-size: 15px;
+        <!--line-height: normal;-->
+        vertical-align: middle;
+        background-color: #4CAF50;
+        cursor: pointer;
+        border: 1px solid #ebebeb;
+        border-bottom-color: #e2e2e2;
+        border-radius: .25em;
+        font-weight: 500;
+    }
+
+    .filebox input[type="file"] {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0,0,0,0);
+        border: 0;
+    }
+
+    .filebox label {           /* 파일 선택 버튼 스타일 */
+        width: 100px;
+        display: inline-block;
+        padding: .5em .75em;
+        color: #999;
+        font-size: 15px;
+        <!--line-height: normal;-->
+        vertical-align: middle;
+        background-color: #fdfdfd;
+        cursor: pointer;
+        <!--border: 1px solid #ebebeb;-->
+        border-bottom-color: #e2e2e2;
+        border-radius: .25em;
+        font-weight: 500;
+    }
+
+    .filebox .upload-name, input[type=text] { /* 텍스트필드 스타일 */
+        display: inline-block;
+        padding: .5em .75em;
+        <!--font-size: inherit;-->
+        <!--font-family: inherit;-->
+        <!--line-height: normal;-->
+        vertical-align: middle;
+        color: #000;
+        background-color: #f5f5f5;
+        <!--background-color: #7f7f7f;-->
+        border: 1px solid #ebebeb;
+        border-bottom-color: #e2e2e2;
+        border-radius: .25em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 300px;                 <!-- 왼쪽 입력 필드 너비 -->
+        height: 30px;                 <!-- 왼쪽 입력 필드 높이 -->
+    }
+
+    .filebox.bs3-primary label {
+        color: #fff;
+        background-color: #337ab7;
+        text-align: center;
+    }
+
+    .nameBox .input-name {
+        text-align:center;
+    }
+
+    input[type=text] {
+    width:120px;
+    }
+
+    input {
+    text-align:center;
+    }
+
+    </style>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      var fileTarget = $('.filebox .upload-hidden');
+
+        fileTarget.on('change', function(){
+            if(window.FileReader){
+                var filename = $(this)[0].files[0].name;
+            } else {
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            }
+
+            $(this).siblings('.upload-name').val(filename);
+        });
+    });
+    </script>
+
+    <!-- ------------------------------------------------------------------- -->
+
+    <div class="row" style="width:1000px;">
+    <div class="col-lg-12">
+        <!--<h1 id="type"><img src="static/logo_snu.png" style="width: 30px">&nbsp; 데이터 입력</h1>-->
+    </div>
+    </div>
+
+    <!-- name="file"은 파이썬의 upload_files와 연동하기 위한 식별자 -->
+
+
+    <form action = "/upload_file_a" method = "POST" enctype = "multipart/form-data">
+    <div class="filebox bs3-primary" style="width:1000px;">
+        <input class="input-name" type="text" name="userName" placeholder="이름 입력" required="required">
+        <input class="upload-name" value="선택 안함" disabled="disabled">
+        <label for="ex_filename">파일 선택</label>
+        <input type="file" id="ex_filename" class="upload-hidden" name="file">
+        <input type="submit" value="업로드">
+    </div>
+    </form>
+
+    <!-- ------------------------------------------------------------------- -->
+
+    <hr>
+    <div class="panel panel-default">
+    <div class="panel-heading" style="font-size:16px">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <h4>{{ message }}</h4>
+                {% endfor %}
+            {% else %}
+                <h4>업로드 결과를 보여주는 곳입니다.</h4>
+            {% endif %}
+        {% endwith %}
+    </div>
+    </div>
+{% endblock %}

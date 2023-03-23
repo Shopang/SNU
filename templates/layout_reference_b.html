@@ -1,0 +1,466 @@
+<!--<!DOCTYPE html>-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="utf-8">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>배추좀나방 약제 저항성 DB</title>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <link rel="stylesheet" href="static/css/bootstrap.css" media="screen">
+
+	<script src="static/css/bootstrap.js" type="text/javascript"></script>
+
+	<link href="http://bigdata.yonsei.ac.kr/docs.min.css" rel="stylesheet">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="http://openhangul.com/nanumfont.css" media="all" />-->
+    <!--<link rel="shortcut icon" href="http://openhangul.com/images/favicon.ico" />-->
+    <link rel="shortcut icon" href="static/logo_snu.png" />
+
+
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+   <style>
+   @font-face {
+	font-family: 'Daum_Regular';
+	font-style: normal;
+	font-weight: 100;
+	src: url('/font/daum_regular2.eot') format('eot');
+	src: local('?')
+	, url('/font/daum_regular2.eot') format('eot')
+	, url('/font/daum_regular2.woff') format('woff');
+   }
+   @font-face {
+   font-family: 'HANBatang';
+   src: url('/font/HANBatang.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+   }
+   @font-face {
+   font-family: 'HANBatangBold';
+   src: url('/font/HANBatangB.woff') format('woff');
+   font-weight: bold;
+   font-style: bold;
+   }
+
+	body {
+	//background-color: #f0f0f0;
+	//max-width: 1000px !important;
+	//margin: 0 auto;
+	font-color:#fff;
+    font-family: 'Daum_Regular', '나눔고딕','NanumGothic',ng, sans-serif !important;
+	font-size: 14px;
+	text-decoration: none !important;
+	}
+
+	.nanum {
+	font-family: '나눔고딕','NanumGothic',ng, sans-serif;
+	}
+
+	.daum {
+	font-family: 'Daum_Regular', '나눔고딕','NanumGothic',ng, sans-serif;
+	}
+
+	.navbar-brand, li, h1, h2, h3, h4, h5, h6, table {
+	font-family: 'Daum_Regular', '나눔고딕','NanumGothic',ng, sans-serif;
+	}
+
+	.jumbotron h1 {	font-size:28px; }
+	.jumbotron p {	font-size:14px; }
+
+	h1 { font-size:20px;}
+	h2 { font-size:18px;}
+	h3 { font-size:16px;}
+	h4 { font-size:14px;}
+	h5 { font-size:12px;}
+
+	.container { left:150px; max-width: 1000px; margin:0 ; position:relative;}
+	.nav>li  { font-size:14px;}
+	.dropdown-menu { top:111%;}
+	.dropdown-menu>li  { font-size:14px;}
+	.lead { font-size:20px;}
+	legend { font-size:18px; padding:5px}
+	.panel-title { padding:3px;font-size:14px; font-weight:normal}
+
+	.well { padding:10px;}
+	.label { font-family: 'Daum_Regular', '나눔고딕','NanumGothic',ng, sans-serif;}
+	.btn { font-family: 'Daum_Regular', '나눔고딕','NanumGothic',ng, sans-serif;}
+
+	.console { font-size:14px; background: #000; color:white; font-family: '나눔고딕','NanumGothic',ng, sans-serif;}
+	.console a {color: #FFFFFF; text-decoration: none;}
+	blockquote p { font-size:16px;}
+
+
+
+.dropdown ul.dropdown-menu:before {
+    content: "";
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: 16px;
+    z-index: 10;
+}
+.dropdown ul.dropdown-menu:after {
+    content: "";
+    border-bottom: 12px solid #ccc;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+    position: absolute;
+    top: -12px;
+    left: 14px;
+    z-index: 9;
+}
+
+
+
+/* Badger
+------------------------- */
+
+[class*="badger"] {
+    position: relative;
+    margin: 0 0 22px 0;
+    padding: 39px 19px 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+[class*="badger"]:after {
+    content: attr(data-badger);
+    position: absolute;
+    top: 0;
+    padding: 3px 7px;
+    font-family: '나눔고딕','NanumGothic',ng, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    background: #999;
+    color: #fff;
+}
+
+.badger-left:after {
+    left: 0;
+    border-radius: 6px 0 6px 0;
+}
+
+.badger-right:after {
+    right: 0;
+    border-radius: 0 6px 0 6px;
+}
+
+.badger-danger:after {
+    background: #d9534f;
+}
+
+.badger-warning:after {
+    background: #f0ad4e;
+}
+
+.badger-success:after {
+    background: #5cb85c;
+}
+
+.badger-info:after {
+    background: #5bc0de;
+}
+
+.badger-inverse:after {
+    background: #222;
+}
+
+/* 테이블 스타일 */
+table.type01 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+    margin : 20px 0px;
+    /*
+    overflow-x: scroll;
+    */
+}
+table.type01 th {
+    width: 150px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+table.type01 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border: 1px solid #ccc;
+}
+
+.menubar{
+position:fixed;
+left:850px;
+color:#ffffff;
+border:none;
+border:0px;
+margin:0px 0px 0px 0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+list-style:none;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+width:120px;
+}
+
+.menubar li a{
+background: #FCAC76;
+color:#ffffff;
+display:block;
+font-size:15px;
+font-weight:normal;
+line-height:40px;
+margin:0px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+/*background: #FCAC76;*/
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+width:120px;
+color:#000000;
+background: #06D683;
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:40px;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+z-index:200;
+/*top:1em;*/
+/*left:0;*/
+}
+
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: #06D683;
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:120px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+
+.menubar li ul a{
+width:120px;
+color:#000000;
+display:block;
+height:40px;
+font-size:15px;
+font-style:normal;
+margin:0px;
+padding:0px 0px 0px 0px;
+text-align:center;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: #FCAC76;
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+color:#000000;
+}
+
+.menubar ul li label {
+width:80px;
+height:40px;
+}
+
+.login
+{
+width:100px;
+left:1050px;
+top:25px;
+position:fixed;
+text-decoration:none;
+padding:8px;
+height:40px;
+list-style:none;
+}
+
+.login li a:hover
+{
+text-decoration:none;
+}
+
+@media (max-width:767px) {
+.navbar-nav {
+margin : 0;
+}
+/*
+.container {
+background-color:#000000;
+}*/
+}
+
+.navbar-nav {
+left:20px;
+border-top : 0;
+position:relative;
+
+height:40px;
+margin: 0 auto;
+}
+
+.navbar-nav li {
+padding: auto;
+list-style:none;
+position:relative;
+float:left;
+line-height:40px;
+}
+
+.navbar-nav li a:hover {
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+
+{% block greeting %}
+{% endblock %}
+{% block life %}
+{% endblock %}
+{% block drugs_info %}
+{% endblock %}
+{% block resistance_info %}
+{% endblock %}
+{% block view %}
+{% endblock %}
+{% block upload %}
+{% endblock %}
+{% block reference %}
+{% endblock %}
+
+ </style>
+</head>
+<body style="max-width:1280px;">
+  <div class="navbar navbar-inverse navbar-fixed-top" style="border-bottom:1px #dddddd solid; background-color:#ffffff; padding:14px;">
+    <div class="container" style="height:40px; width:1000px;">
+      <div class="navbar-header" style="float:left;">
+        <a href="/" class="navbar-brand"><img src="static/logo_snu.png" style="width:40px; height:40px; float:left;"></a>
+        <!--<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">-->
+          <!--<span class="icon-bar"></span>-->
+          <!--<span class="icon-bar"></span>-->
+          <!--<span class="icon-bar"></span>-->
+        <!--</button>-->
+      </div>
+      <div id="navbar-main" style="float:left; padding:7px;">
+        <ul class="nav navbar-nav" style="float:left;">
+            <li class="greeting"       ><a style="color:#000;" href="{{ url_for('greeting_b') }}">인사말</a></li>
+            <li class="life"           ><a style="color:#000;" href="{{ url_for('life_b') }}">생활사</a></li>
+            <li class="drugs_info"     ><a style="color:#000;" href="{{ url_for('drugs_info_b') }}">등록약제</a></li>
+            <li class="resistance_info"><a style="color:#000;" href="{{ url_for('resistance_info_b') }}">저항성 정보</a></li>
+            <li class="view"           ><a style="color:#000;" href="{{ url_for('view_b') }}">데이터 보기</a></li>
+            <li class="upload"         ><a style="color:#000;" href="{{ url_for('upload_b') }}">데이터 입력</a></li>
+            <li class="reference"      ><a style="color:#000;" href="{{ url_for('reference_b') }}">참고문헌</a></li>
+
+          <!--<li class="dropdown">-->
+            <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">자연어 <span class="caret"></span></a>-->
+            <!--<ul class="dropdown-menu" aria-labelledby="themes">-->
+              <!--<li><a href="http://openhangul.com/nlp_orig">기본형추출</a></li><li class="divider"></li><li><a href="http://openhangul.com/nlp_ko2en">한글 > 알파벳</a></li><li class="divider"></li><li><a href="http://openhangul.com/nlp_topic">카테고리 추출</a></li><li class="divider"></li><li><a href="http://openhangul.com/nlp_jaso">자소분리</a></li><li class="divider"></li><li><a href="http://openhangul.com/nlp_typo">근접어</a></li><li class="divider"></li><li><a href="http://openhangul.com/nlp_lang_detect">언어판별</a></li><li class="divider"></li><li><a href="http://openhangul.com/morpheme">형태소</a></li>              </ul>-->
+          <!--</li>-->
+        </ul>
+
+          <div class="menubar">
+            <ul>
+              <li><a href="" id="current"><label>배추좀나방</label></a>
+                <ul>
+                  <li><a href="{{ url_for( first ) }}"><label>애멸구</label></a></li>
+                  <li><a href="{{ url_for( second ) }}"><label>배추좀나방</label></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="login">
+            <li><a href="{{ url_for('login') }}"><i class="fa fa-male"></i> 로그인</a></li>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  <br /><br /><br />
+
+
+<div class="jumbotron text-center" style="width:1280px; margin-top:24px; background-image: url('static/background.png'); no-repeat center center fixed;background-size: cover; opacity:0.7; filter:alpha(opacity=70);">
+  <div class="form-group has-success text-center">
+    <center>
+      <p class="text-center">
+      <table cellpadding="5" style="color:#000; text-shadow:none">
+      <tr>
+        <td>
+          <!-- static 폴더의 "logo.jpg" 아이콘-->
+          <h1 class="text-primary" style="color:#000; font-weight:bold;">배추좀나방 약제 저항성 데이터베이스</h1>
+          <!--<h1 class="text-primary"><img src="static/logo_snu.png" style="width:40px">배추좀나방 약제 저항성 데이터베이스</h1>-->
+          <!--<div class="text-center">한글 감성을 나누다</div>-->
+        </td>
+      </tr>
+      </table>
+      </p>
+    </center>
+  </div>
+</div>
+
+<div class="container">
+  {% block content %}
+  {% endblock %}
+</div>
+
+<!-- <hr> 여러 줄 공백 -->
+<hr >
+<footer class="" style="background: ;  width:400px; position:absolute; left:280px;">
+  <div class="container_aaa text-center">
+    <p style="color:#999;" class="small">Copyright 2017. 서울대학교 농업생명과학연구원 all rights reserved.</p><br />
+    <div class="row text-center">
+      <ul class="list-inline">
+        <li><img src="static/logo_snu.png"  style="width:80px;"></li>
+        <li><img src="static/logo_rda.png"  style="width:80px;"></li>
+        <li><img src="static/logo_nass.png" style="width:80px;"></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55480741-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

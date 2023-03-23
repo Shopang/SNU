@@ -1,0 +1,55 @@
+{% extends "layout_a.html" %}
+{% block greeting %}
+.greeting {
+background-color:#FAFAFA;
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-lg-12" style="width:1000px;">
+        <!--<h1 id="type"><img src="static/logo_snu.png" style="width: 30px">&nbsp; 인사말</h1>-->
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <!--<div class="panel-heading" style="font-size:16px"> '오픈한글' 프로젝트</div>-->
+    <div class="panel-body" style="width:1050px;">
+        <p>국내 벼 재배지 주요 비래 해충은
+          벼멸구, 애멸구 그리고 흰등멸구로서 연도별로,<br />
+          비규칙적으로 비래하며 방제는 대부분 화학합성 살충제에 의존하여 이뤄지고 있다.</p>
+        <br />
+
+        <p>화학합성 살충제는
+          오랜 기간의 연구와 체계적인 평가를 거쳐 제품으로 생산되어 소비자가 사용하게 되지만,<br />
+          단일 약제의 연용과 오용은 표적 생물의 약제에 대한 내성과 저항성을 유발하여
+          방제 효율을 저하시키는 원인이 된다.</p>
+        <br />
+
+        <p>해충의 약제 내성 및 저항성 발달을 지연시키고,
+          방제 효율을 증진시키고자
+          최근 작물보호협회에서는 생태독성과 포유류 독성을 우선적으로 표기하고,<br />
+          IRAC(살충제저항성 대책위원회)에서 제시한 농약 작용점을 그룹별로 라벨링하여
+          동일 작용점을 지닌 다른 약제의 사용을 지양하는데 노력하고 있다.</p>
+        <br />
+
+        <p>이러한 흐름에 동참하여,
+          본 데이터 베이스는 비래 멸구류 방제용 화학합성 살충제를 중심으로
+          현재까지 등록된 약제들을 소개하고,<br />
+          약제 작용점별로 약제들을 구별하여, 거시적인 관점에서
+          농민 및 농약판매자들이 합리적인 약제 선택을 유도하기 위해 제작하였다.</p>
+        <br />
+
+        <p>또한 2009년도에 발생한
+          애멸구 집단의 저항성 수준 정보를 표기하여
+          주요 비래 해충에 대한 국내 약제 저항성 발달 수준을 이해하도록 참고자료로 추가하였다.</p>
+
+        <!--<p class="text-default">2014년 10월 9일 한글날 이후 누구나 오픈API를 사용할 수 있습니다.</p>-->
+        <!--<div class="text-right">- 오픈 한글 -</div>-->
+    </div>
+  </div>
+{% endblock %}

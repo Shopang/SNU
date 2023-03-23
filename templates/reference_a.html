@@ -1,0 +1,35 @@
+{% extends "layout_reference_a.html" %}
+{% block reference %}
+.reference {
+background-color:#FAFAFA;
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-lg-12">
+        <!--<h1 id="type"><img src="static/logo_snu.png" style="width: 30px">&nbsp; 참고문헌</h1>-->
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body" style="width:1000px;">
+    <ol>
+      <p><li><a href="http://www.koreacpa.org/new/sub.html?sub=2">농약사용지침서(작물보호협회)</a></li></p>
+      <p><li><a href="http://www.nongsaro.go.kr/portal/Main.ps?menuId=PS00001">농사로(농촌진흥청)</a></li></p>
+      <p><li>Min, Sujeong, et al.<br />
+      "Insecticide resistance monitoring and correlation analysis to select appropriate insecticides against Nilaparvata lugens (Stål),<br />
+      a migratory pest in Korea." Journal of Asia-Pacific Entomology 17.4 (2014): 711-716.</li></p>
+      <p><li>Jeong, In-Hong, et al.<br />
+      "Monitoring and evaluation of differential insecticide resistance profiles in the immigrant vs. indigenous populations of the small brown<br />
+      planthopper (Laodelphax striatellus Fallén) in Korea." Journal of Asia-Pacific Entomology 19.1 (2016): 247-252.</li></p>
+    </ol>
+
+  </div>
+{% endblock %}
+
+<!--농약사용지침서, http://www.koreacpa.org/new/sub.html?sub=2, 작물보호협회-->
+<!--농사로, http://www.nongsaro.go.kr/portal/Main.ps?menuId=PS00001, 농촌진흥청-->
+<!--Min, Sujeong, et al. "Insecticide resistance monitoring and correlation analysis to select appropriate insecticides against Nilaparvata lugens (Stål), a migratory pest in Korea." Journal of Asia-Pacific Entomology 17.4 (2014): 711-716.-->
+<!--Jeong, In-Hong, et al. "Monitoring and evaluation of differential insecticide resistance profiles in the immigrant vs. indigenous populations of the small brown planthopper (Laodelphax striatellus Fallén) in Korea." Journal of Asia-Pacific Entomology 19.1 (2016): 247-252.-->

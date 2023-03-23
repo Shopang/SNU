@@ -1,0 +1,29 @@
+{% extends "layout_b.html" %}
+{% block greeting %}
+.greeting {
+background-color:#FAFAFA;
+border: 1px solid #ccc; /* 메뉴 테두리 */
+border-radius:0.5em; /* 메뉴 테두리 둥글게 */
+}
+{% endblock %}
+{% block content %}
+
+  <div class="row">
+    <div class="col-lg-12" style="width:1000px;">
+        <!--<h1 id="type"><img src="static/logo_snu.png" style="width: 30px">&nbsp; 인사말</h1>-->
+    </div>
+  </div>
+
+
+  <div class="panel panel-default">
+    <!--<div class="panel-heading" style="font-size:16px"> '오픈한글' 프로젝트</div>-->
+    <div class="panel-body" style="width:1000px;">
+        <p>배추좀나방은 십자화과 작물에 심각한 피해를 주는 주요 해충으로서<br />
+            약 80여년 전 DDT 사용 시기 부터 저항성 개체군 발달 사례가 보고된 바 있습니다.</p>
+        <br />
+        <p>국내에서도 1990년 초반부터 약제 저항성 발달 사례가 보고되었습니다.</p>
+        <!--<p class="text-default">2014년 10월 9일 한글날 이후 누구나 오픈API를 사용할 수 있습니다.</p>-->
+        <!--<div class="text-right">- 오픈 한글 -</div>-->
+    </div>
+  </div>
+{% endblock %}
